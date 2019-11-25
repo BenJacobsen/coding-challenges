@@ -10,8 +10,8 @@ import sys
 def compareTriplets(a, b):
     x = y = 0
     for i in range(0, 3):
-        x = x + int(a[i] - b[i] > 0)
-        y = y + int(b[i] - a[i] > 0)
+        x += int(a[i] > b[i])
+        y += int(b[i] > a[i])
     return [x, y]
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
