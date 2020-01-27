@@ -11,7 +11,7 @@ class Solution:
                 if s[i] == s[front]:
                     ret = max(front - back, ret)
                     back = i+1
-                    break;
+                    break
             if front == len(s)-1:
                 ret = max(front + 1 - back, ret)
         return ret
